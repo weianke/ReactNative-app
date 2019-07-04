@@ -7,3 +7,13 @@ export const setDataId = (id) => {
     id
   }
 }
+
+
+export const SETNUM = 'SETNUM'
+
+export const setNum = (num) => {
+  return {
+    type: SETNUM,
+    num
+  }
+}

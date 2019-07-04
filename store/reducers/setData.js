@@ -6,10 +6,10 @@ const setData = (state = {}, action) => {
       return {
         ...state,
         id: action.id
-      };
+      }
     default:
-      return {...state}
+      return state
   }
 }
 
-export default setData;
+export default setData
