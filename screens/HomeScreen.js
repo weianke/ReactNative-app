@@ -96,10 +96,9 @@ var styles = StyleSheet.create({
 })
 
 homeScreen.navigationOptions = {
-  headerTintColor: 'red',
-  mode: 'modal',
-  // header: null,
-  headerBackTitle: '返回',
-  headerRight: <Button title="返回"/>,
-  // headerTitle: 'CommunityPage'
+  // headerTintColor: 'red',
+  // mode: 'modal',
+  header: null
+  // headerBackTitle: '返回',
+  // headerTitle: <Button title="返回"/>,
 }
