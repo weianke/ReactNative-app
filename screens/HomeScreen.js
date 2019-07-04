@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Image, FlatList, StyleSheet, Text, View } from 'react-native'
+import { Image, FlatList, StyleSheet, Text, View, Button } from 'react-native'
 
 const REQUEST_URL =
   'https://raw.githubusercontent.com/facebook/react-native/0.51-stable/docs/MoviesExample.json'
@@ -96,5 +96,10 @@ var styles = StyleSheet.create({
 })
 
 homeScreen.navigationOptions = {
-  header: null
+  headerTintColor: 'red',
+  mode: 'modal',
+  // header: null,
+  headerBackTitle: '返回',
+  headerRight: <Button title="返回"/>,
+  // headerTitle: 'CommunityPage'
 }

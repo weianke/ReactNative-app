@@ -13,6 +13,11 @@ import {
 const baseUrl =
   'https://easy-mock.com/mock/5d1c53247abfb76fe0923cee/RnMovie/movie'
 export default class settings extends Component {
+  // 配置头部
+  static navigationOptions = {
+    header: null
+  }
+
   constructor(props) {
     super(props)
     this.state = {
@@ -90,8 +95,3 @@ var styles = StyleSheet.create({
     backgroundColor: '#F5FCFF'
   }
 })
-
-// 配置头部导航
-settings.navigationOptions = {
-  header: null
-}
