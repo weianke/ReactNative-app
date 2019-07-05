@@ -24,7 +24,7 @@ class settingNew extends Component {
            this.setState({
              id: 133
            }, ()=> {
-             console.log(this.state.id)
+            //  console.log(this.state.id)
               this.props.setDataId(this.state.id)
               // console.log(this.props.id);
               navigation.navigate('HomeDetail')
