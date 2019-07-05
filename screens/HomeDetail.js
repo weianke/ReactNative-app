@@ -3,7 +3,6 @@ import {connect} from 'react-redux'
 import { setDataId } from './../store/actions'
 import { View, Text, Button} from 'react-native';
 
-// import { Container } from './styles';
 
 class HomeDetail extends Component {
   constructor (props) {
