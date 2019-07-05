@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
-import {connect} from 'react-redux'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { setDataId } from './../store/actions'
-import { View, Text, Button} from 'react-native';
-
+import { View, Text, Button } from 'react-native'
 
 class HomeDetail extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       id: 0
@@ -15,19 +14,23 @@ class HomeDetail extends Component {
   componentDidMount() {
     // console.log(this.props);
   }
+
+  handleChange = () => {
+    this.setState(
+      {
+        id: this.props.id
+      },
+      () => {
+        const num = 6666
+        this.props.setDataId(num)
+      }
+    )
+  }
   render() {
     return (
       <View>
         <Text>我是HOME-子页面 {this.props.id}</Text>
-        <Button title='跳转' onPress={()=>{
-          this.setState({
-            id: this.props.id
-          },()=>{
-            const num = 6666
-            this.props.setDataId(num)
-          })
-          // this.props.navigation.goBack()
-        }}/>
+        <Button title="跳转" onPress={this.handleChange} />
       </View>
     )
   }
@@ -46,4 +49,7 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomeDetail)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(HomeDetail)
